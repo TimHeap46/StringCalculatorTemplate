@@ -15,6 +15,17 @@ describe("String Calculator", function () {
        expect(stringCalculator.add("1,2")).toEqual("3");
     });
 
+    it('Multiply empty string returns "0"', function() {
+        expect(stringCalculator.multiply(panel.utils.StringCalculator.prototype.emptyString)).toEqual("0");
+    });
+
+    it('Multiply 1 returns "1"', function () {
+        expect(stringCalculator.multiply("1")).toEqual("1");
+    });
+
+    it('Multiply 2,3 returns "6"', function() {
+        expect(stringCalculator.multiply("2,3")).toEqual("6");
+    });
 });
 
 panel.utils.StringCalculator.prototype.emptyString = "";
